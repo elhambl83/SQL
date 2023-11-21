@@ -6,87 +6,83 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
+    <EditText
         android:id="@+id/descriptionCourse"
-        android:layout_width="299dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="56dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="56dp"
-        android:layout_marginBottom="37dp"
-        android:hint="توضیحات دوره را وارد کنید"
-        android:textAlignment="center"
-        android:textColorHint="#9C27B0"
-        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="50dp"
+        android:ems="10"
+        android:hint="توضیحات دوره"
+        android:inputType="text"
         app:layout_constraintBottom_toTopOf="@+id/addbutton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/timeCourse"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <TextView
-        android:id="@+id/priceCourse"
-        android:layout_width="299dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="56dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="56dp"
-        android:hint="قیمت دوره را وارد کنید"
-        android:textAlignment="center"
-        android:textColorHint="#9C27B0"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/timeCourse" />
-
-    <TextView
-        android:id="@+id/timeCourse"
-        android:layout_width="299dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="56dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="56dp"
-        android:layout_marginBottom="31dp"
-        android:hint="مدت دوره را وارد کنید"
-        android:textAlignment="center"
-        android:textColorHint="#9C27B0"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nameCourse" />
-
-    <TextView
-        android:id="@+id/nameCourse"
-        android:layout_width="299dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="56dp"
-        android:layout_marginTop="97dp"
-        android:layout_marginEnd="56dp"
-        android:layout_marginBottom="36dp"
-        android:hint="نام دوره را وارد کنید "
-        android:textAlignment="center"
-        android:textColorHint="#9C27B0"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/timeCourse"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/priceCourse" />
 
     <Button
         android:id="@+id/addbutton"
-        android:layout_width="118dp"
-        android:layout_height="66dp"
+        android:layout_width="145dp"
+        android:layout_height="56dp"
         android:layout_marginStart="143dp"
+        android:layout_marginTop="30dp"
         android:layout_marginEnd="144dp"
         android:layout_marginBottom="280dp"
         android:text="تایید"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.476"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/descriptionCourse" />
+
+    <EditText
+        android:id="@+id/nameCourse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="102dp"
+        android:layout_marginEnd="100dp"
+        android:ems="10"
+        android:hint="نام دوره"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/timeCourse"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/timeCourse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginEnd="100dp"
+        android:ems="10"
+        android:hint="طول دوره"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/priceCourse"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameCourse" />
+
+    <EditText
+        android:id="@+id/priceCourse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="2dp"
+        android:ems="10"
+        android:hint="قیمت دوره"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/descriptionCourse"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/timeCourse" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

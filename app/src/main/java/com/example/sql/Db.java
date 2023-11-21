@@ -4,9 +4,11 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.widget.TextView;
+
 
 import androidx.annotation.Nullable;
+
+import org.w3c.dom.Text;
 
 public class Db extends SQLiteOpenHelper{
 
@@ -43,7 +45,7 @@ public class Db extends SQLiteOpenHelper{
     }
 
     @Override
-    public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
+    public void onUpgrade(SQLiteDatabase sqLiteDatabase, int oldVersion, int newVersion) {
         SQLiteDatabase db = null;
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME);
 
@@ -51,16 +53,14 @@ public class Db extends SQLiteOpenHelper{
     }
 
 
-    private static void execSQL(String s) {
-    }
 
-    public void addCourse(TextView nameCourse, TextView timeCourse, TextView priceCourse, TextView descriptionCourse) {
-        SQLiteDatabase db = this.getReadableDatabase();
+    public void addCourse(String nameCourse, String timeCourse, String priceCourse, String descriptionCourse) {
+        SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
-        values.put(NAME_COL, String.valueOf(nameCourse));
-        values.put(TIME_COL, String.valueOf(timeCourse));
-        values.put(PRICE_COL, String.valueOf(priceCourse));
-        values.put(DESCRIPTION_COL, String.valueOf(descriptionCourse));
+        values.put(NAME_COL, nameCourse);
+        values.put(TIME_COL, timeCourse);
+        values.put(PRICE_COL, priceCourse);
+        values.put(DESCRIPTION_COL, descriptionCourse);
         db.insert(TABLE_NAME, null, values);
         db.close();
 
